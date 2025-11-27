@@ -1,1 +1,10 @@
-db/install.xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="question/bank/competenciesbyquestion/db"
+       VERSION="2025112700"
+       COMMENT="XMLDB file for qbank_competenciesbyquestion"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <TABLES>
+        <!-- Per ora nessuna tabella; le aggiungeremo dopo. -->
+    </TABLES>
+</XMLDB>
