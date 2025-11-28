@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="question/bank/competenciesbyquestion/db"
-       VERSION="2025112700"
-       COMMENT="XMLDB file for qbank_competenciesbyquestion"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+<XMLDB PATH="qbank/competenciesbyquestion/db" VERSION="2025112800" COMMENT="Map question to competency" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
     <TABLES>
-        <!-- Per ora nessuna tabella; le aggiungeremo dopo. -->
+        <TABLE NAME="qbank_competenciesbyquestion" COMMENT="Mapping between questions and competencies">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="questionid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" COMMENT="ID from question table"/>
+                <FIELD NAME="competencyid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" COMMENT="ID from competency table"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="questionid_fk" TYPE="foreign" FIELDS="questionid" REFTABLE="question" REFFIELDS="id"/>
+                <KEY NAME="competencyid_fk" TYPE="foreign" FIELDS="competencyid" REFTABLE="competency" REFFIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="question_competency" UNIQUE="true" FIELDS="questionid, competencyid"/>
+            </INDEXES>
+        </TABLE>
     </TABLES>
 </XMLDB>
