@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="qbank/competenciesbyquestion/db" VERSION="2025112800" COMMENT="Map question to competency" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+<XMLDB PATH="question/bank/competenciesbyquestion/db" VERSION="2025112800" COMMENT="Map question to competency" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
     <TABLES>
         <TABLE NAME="qbank_competenciesbyquestion" COMMENT="Mapping between questions and competencies">
             <FIELDS>
